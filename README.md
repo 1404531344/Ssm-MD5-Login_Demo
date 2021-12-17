@@ -10,3 +10,6 @@ idea , maven,mysql8
 <img width="1206" alt="屏幕截图 2021-12-17 201718" src="https://user-images.githubusercontent.com/34331205/146543648-d20f37f5-bfd9-4144-aec5-e833f8ce8d95.png">
 登录失败:
 <img width="1186" alt="屏幕截图 2021-12-17 201936" src="https://user-images.githubusercontent.com/34331205/146543819-ef62eb33-9f96-4e1f-93ee-96fa26ac33a7.png">:
+
+# 增加用户
+在index.html中找到findUserByPassWord.action 并改为addUser.action。增加成功返回 1。。。。

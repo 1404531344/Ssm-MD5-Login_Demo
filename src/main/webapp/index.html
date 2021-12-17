@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+<link rel="stylesheet" href="/Ssm_MD5_Login_Demo_war_exploded/css/bootstrap.min.css">
+
+</head>
+<body>
+
+
+
+<form id='test_form' action='/Ssm_MD5_Login_Demo_war_exploded/findUserByPassWord.action' method='post' >
+    <label for="name">账户：</label>
+    <input type="text" name="name" id="name"  />
+
+    <label for="password">密码：</label>
+    <input type="password" name="password" id="password"  />
+
+    <input type="submit" value="提交" onsubmit="checkForm()"/>
+</form>
+
+
+
+
+<script src="/Ssm_MD5_Login_Demo_war_exploded/js/jquery.min.js"></script>
+<script src="/Ssm_MD5_Login_Demo_war_exploded/js/bootstrap.min.js"></script>
+<script>
+
+
+    function checkForm(){
+let name = document.getElementById("name").value;
+let password = document.getElementById("password").value;
+
+let data = [{
+    name:name,
+    password:password,
+}];
+
+$.ajax({
+    type:'post',
+    data:data,
+    dataType:'json',
+    url:'findUserByPassWord.action',
+    success :function(data) {
+
+        alert("OK");
+
+    },
+
+    error :function(e) {
+
+        alert("error");
+
+    }
+
+    })
+
+
+
+    }
+
+
+</script>
+
+</body>
+</html>
